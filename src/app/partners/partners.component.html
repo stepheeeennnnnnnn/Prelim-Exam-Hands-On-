@@ -1,0 +1,40 @@
+<header class="bg-dark py-5" style="background-image: url('https://img.freepik.com/fotos-gratis/onda-em-estrutura-de-arame-cinza-com-formas-geometricas-em-um-fundo-preto_53876-129584.jpg?w=1800&t=st=1706844692~exp=1706845292~hmac=f930e723f8829d9a5d93b0c19b45f30f3107d1bbd45a817f8986518ba0d8f911')">
+  <div class="container px-5">
+      <div class="row gx-5 justify-content-center">
+          <div class="col-lg-6">
+              <div class="text-center my-5">
+                  <h1 class="display-5 fw-bolder text-white mb-2">Our Partners</h1>
+                  <p class="lead text-white-50 text-white mb-4">You can achieve a very impressive effect by using our animated navbar, which is 
+                    transparent on start, and change the color after the scroll
+                      
+                  </p>
+                  <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                    <a class="btn btn-outline-primary" href="#!">Become our Sponsor</a>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+<h2 class="partners-heading ">Below are our Corporate Partners</h2>
+<table class="partners-table">
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Trademark</th>
+      <th>Sponsorship</th>
+      <th>Go to Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- *ngFor Directive for Iterating Over 'partners' Array -->
+    <tr *ngFor="let partner of partners">
+      <td>{{ partner.name }}</td>
+      <td><img [src]="partner.logo" alt="{{ partner.name }} Logo"></td>
+      <td>{{ partner.sponsorship }}</td>
+      <td><a href="{{ partner.website }}" target="_blank">Visit Website</a></td>
+    </tr>
+  </tbody>
+</table>
